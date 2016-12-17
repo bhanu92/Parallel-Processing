@@ -1,0 +1,76 @@
+Sender: LSF System <phpcadmin@gpu30>
+Subject: Job 626528: <histogram> in cluster <phpc_cluster> Done
+
+Job <histogram> was submitted from host <elgato-login.hpc.arizona.edu> by user <bhanu92> in cluster <phpc_cluster>.
+Job was executed on host(s) <3*gpu30>, in queue <windfall>, as user <bhanu92> in cluster <phpc_cluster>.
+                            <3*gpu66>
+                            <3*gpu58>
+                            <2*gpu59>
+                            <2*gpu18>
+                            <2*gpu5>
+                            <2*gpu31>
+                            <2*gpu51>
+                            <2*gpu34>
+                            <11*gpu6>
+</home/u8/bhanu92> was used as the home directory.
+</home/u8/bhanu92/histo> was used as the working directory.
+Started at Fri Nov  4 13:41:20 2016
+Results reported at Fri Nov  4 13:41:22 2016
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -n 32
+#BSUB -o lsf.out
+#BSUB -e lsf.err
+#BSUB -q "windfall"
+#BSUB -J histogram
+#BSUB -R gpu
+#---------------------------------------------------------------------
+
+module load cuda
+
+cd /home/u8/bhanu92/histo 
+
+time ./histogram
+
+###end of script
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :               0.98 sec.
+    Max Memory :             93 MB
+    Average Memory :         93.00 MB
+    Total Requested Memory : -
+    Delta Memory :           -
+    (Delta: the difference between total requested memory and actual max usage.)
+    Max Swap :               374 MB
+
+    Max Processes :          4
+    Max Threads :            5
+
+The output (if any) follows:
+
+
+
+0 => 1682671
+1 => 1678853
+2 => 1679345
+3 => 1677010
+4 => 1677982
+5 => 1677194
+6 => 1675627
+7 => 1677282
+8 => 1675589
+9 => 1675663
+
+PS:
+
+Read file <lsf.err> for stderr output of this job.
+
